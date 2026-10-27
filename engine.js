@@ -1,4 +1,4 @@
-import {HEROES,ENEMIES,TRIALS,RELICS,EQUIP_NAMES,VERSION,CONTRACTS} from './data.js?v=3';
+import {HEROES,ENEMIES,TRIALS,RELICS,EQUIP_NAMES,VERSION,CONTRACTS} from './data.js?v=4';
 export const SAVE_KEY='astra-clicker-v1';
 export const MAX_OFFLINE=14400000;
 const clone=x=>JSON.parse(JSON.stringify(x));
