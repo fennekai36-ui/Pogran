@@ -1,4 +1,4 @@
-import {HEROES,ENEMIES,TRIALS,RELICS,EQUIP_NAMES,VERSION,CONTRACTS} from './data.js?v=2';
+import {HEROES,ENEMIES,TRIALS,RELICS,EQUIP_NAMES,VERSION,CONTRACTS} from './data.js?v=3';
 export const SAVE_KEY='astra-clicker-v1';
 export const MAX_OFFLINE=14400000;
 const clone=x=>JSON.parse(JSON.stringify(x));
@@ -36,6 +36,8 @@ else if(type==='burst'){if((s.energy||0)<100)throw Error('Накопи 100 эн�
 else if(type==='contract'){const c=CONTRACTS.find(c=>c.id===arg),progress=ensureContracts(s,now);if(!c||progress.claimed.includes(arg)||progress[arg]<c.goal)throw Error('Поручение ещё не выполнено или награда уже забрана');progress.claimed.push(arg);for(const [key,value] of Object.entries(c.reward)){if(key==='gold')earnGold(s,value);else s[key]+=value}result=c.reward}
 else if(type==='heroUp'){const [id,amountText]=arg.split('|'),amount=Number(amountText)||1,h=s.heroes[id];if(!h||![1,10].includes(amount))throw Error('Герой недоступен');const gain=Math.min(amount,200-h.level);if(gain<=0)throw Error('Максимальный уровень');const cost=heroCost(s,id,gain);if(s.gold<cost)throw Error('Недостаточно золота');s.gold-=cost;h.level+=gain}
 else if(type==='party'){if(!s.heroes[arg])throw Error('Сначала призови героя');if(s.party.includes(arg)){if(s.party.length===1)throw Error('В отряде должен остаться хотя бы один герой');s.party=s.party.filter(id=>id!==arg)}else{if(s.party.length>=3)throw Error('В отряде уже три героя. Сначала освободи место');s.party.push(arg)}}
+else if(type==='partySwap'){const [incoming,outgoing]=String(arg).split('|');if(!s.heroes[incoming]||!heroDef(incoming)||s.party.includes(incoming)||!s.party.includes(outgoing))throw Error('Замена героя недоступна');s.party=s.party.map(id=>id===outgoing?incoming:id)}
+else if(type==='equipBest'){for(const slot of ['weapon','armor','charm']){const candidates=s.gear.filter(g=>g.slot===slot);let best=s.equipped[slot],bestScore=-Infinity;for(const item of candidates){const trial={...s,equipped:{...s.equipped,[slot]:item.id}},p=power(trial,now),score=p.dps+p.tap*3*(1+p.crit*((s.party.includes('tessa')?2.35:2)-1));if(score>bestScore){bestScore=score;best=item.id}}if(best)s.equipped[slot]=best}}
 else if(type==='ascend'){const h=s.heroes[arg];if(!h||h.stars>=5)throw Error('Пробуждение недоступно');const cost=h.stars*10;if(h.shards<cost)throw Error('Недостаточно осколков героя');h.shards-=cost;h.stars++}
 else if(type==='equip'){const item=s.gear.find(x=>x.id===arg);if(!item)throw Error('Вещь не найдена');s.equipped[item.slot]=s.equipped[item.slot]===arg?null:arg}
 else if(type==='gearUp'){const item=s.gear.find(x=>x.id===arg);if(!item||item.level>=20)throw Error('Улучшение недоступно');const cost=10+item.level*8;if(s.dust<cost)throw Error('Недостаточно пыли');s.dust-=cost;item.level++}
