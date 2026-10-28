@@ -155,3 +155,10 @@ main{max-width:1200px}
 .summon-result:after{border-width:16px;border-image-width:16px}
 .hero-grid{gap:22px}
 @media(max-width:670px){.hero-grid{gap:14px}.hero-card:after{border-width:15px;border-image-width:15px;inset:-2px}.hero-card-body{padding:12px 11px 16px}.hero-card-top>.rarity-emblem{width:90px;height:70px;top:0;left:0}.summon-result:after{border-width:13px;border-image-width:13px;inset:-2px}}
+/* Separate alpha currency illustrations, without atlas tiles or dark backplates. */
+.icon.art-icon.currency-art{display:inline-flex;align-items:center;justify-content:center;background:none!important;border:0;border-radius:0;overflow:visible;filter:drop-shadow(0 1px 2px #0003);vertical-align:middle}
+.currency-art img{display:block;width:100%;height:100%;object-fit:contain;background:none;border:0;border-radius:0;pointer-events:none}
+.currency .currency-art{width:34px;height:34px;flex:0 0 34px}
+.hero-card-actions .currency-art,.item-actions .currency-art,.upgrade-bar button .currency-art{width:25px;height:25px;flex:0 0 25px}
+@media(max-width:670px){.currency .currency-art{width:28px;height:28px;flex-basis:28px}.hero-card-actions .currency-art,.item-actions .currency-art{width:25px;height:25px}}
+@media(max-width:360px){.currency .currency-art{width:24px;height:24px;flex-basis:24px}}
