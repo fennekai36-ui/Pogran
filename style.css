@@ -176,3 +176,7 @@ main{max-width:1200px}
 .card-rank .stars{display:flex;align-items:center}
 @media(max-width:670px){.hero-name-overlay{left:8px;right:8px;bottom:12px}.card-rank{gap:4px;min-height:36px}.card-rank>.affinity{width:32px;height:32px}.card-rank .rank-stars{gap:0}.card-rank .rank-star{width:21px;height:21px}}
 @media(max-width:360px){.card-rank{gap:2px}.card-rank>.affinity{width:27px;height:27px}.card-rank .rank-star{width:19px;height:19px}}
+/* Compact section headings: title and useful counters only. */
+.page-heading{align-items:center;margin-bottom:18px;min-height:0}
+.page-heading h1{margin:0;line-height:1.15}
+@media(max-width:670px){.page-heading{margin-bottom:15px}}
