@@ -168,3 +168,11 @@ main{max-width:1200px}
 .hero-name-overlay>.affinity{display:flex;margin-top:5px;width:46px;height:46px}
 .enemy-traits .affinity{width:35px;height:35px}.detail-badges .affinity{width:43px;height:43px}.resonance-line .affinity{width:34px;height:34px}.hero-level-line .affinity{width:27px;height:27px}
 @media(max-width:670px){.hero-name-overlay>.affinity{width:40px;height:40px;margin-top:3px}.affinity{width:32px;height:32px}.detail-badges .affinity{width:40px;height:40px}}
+/* Center hero names at the portrait foot; keep elemental identity beside awakening. */
+.hero-name-overlay{left:12px;right:12px;bottom:15px;text-align:center;display:block}
+.hero-name-overlay h3{margin:0;text-align:center;line-height:1.12}
+.card-rank{gap:9px;min-height:42px;margin:0 0 8px}
+.card-rank>.affinity{width:41px;height:41px}
+.card-rank .stars{display:flex;align-items:center}
+@media(max-width:670px){.hero-name-overlay{left:8px;right:8px;bottom:12px}.card-rank{gap:4px;min-height:36px}.card-rank>.affinity{width:32px;height:32px}.card-rank .rank-stars{gap:0}.card-rank .rank-star{width:21px;height:21px}}
+@media(max-width:360px){.card-rank{gap:2px}.card-rank>.affinity{width:27px;height:27px}.card-rank .rank-star{width:19px;height:19px}}
