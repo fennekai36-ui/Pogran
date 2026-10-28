@@ -201,3 +201,13 @@ main{max-width:1200px}
 @media(max-width:670px){#topbar{height:auto;min-height:102px;padding:6px 12px;gap:9px;grid-template-columns:minmax(0,1fr) 32px}.status-panel{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:0}.status-cell{min-height:43px;gap:4px;padding:4px 5px;justify-content:flex-start}.status-cell:nth-child(3n){border-right:0}.status-cell:nth-child(-n+3){border-bottom:1px solid #c7b78620}.status-copy>small{display:none}.status-copy>b{font-size:12px}.status-copy em{font-size:8px;margin-left:2px}.status-art,.status-cell .currency-art{width:29px;height:29px;flex-basis:29px}#topbar>.topbar-settings{width:32px;min-width:32px;height:36px;min-height:36px;padding:5px}#topbar>.topbar-settings .art-icon{width:23px;height:23px}}
 @media(max-width:360px){#topbar{padding:5px 8px;gap:5px}.status-cell{gap:1px;padding:4px 3px}.status-art,.status-cell .currency-art{width:26px;height:26px;flex-basis:26px}.status-copy>b{font-size:11px}}
 @media(max-width:670px){.status-copy em{display:none}}
+/* Align the visible crest, accounting for transparent image margins. */
+.rarity-emblem[data-rarity="N"]{--crest-aspect:1536 / 1024;--crest-x:18.5547%;--crest-y:25.0977%}
+.rarity-emblem[data-rarity="R"]{--crest-aspect:1536 / 1024;--crest-x:20.5078%;--crest-y:13.6719%}
+.rarity-emblem[data-rarity="SR"]{--crest-aspect:1774 / 887;--crest-x:14.7689%;--crest-y:8.9064%}
+.rarity-emblem[data-rarity="SSR"]{--crest-aspect:1774 / 887;--crest-x:14.7125%;--crest-y:13.6415%}
+.rarity-emblem[data-rarity="UR"]{--crest-aspect:1536 / 1024;--crest-x:10.026%;--crest-y:10.9375%}
+.rarity-emblem[data-rarity="EX"]{--crest-aspect:1672 / 941;--crest-x:17.1053%;--crest-y:16.3656%}
+.hero-card-top>.rarity-emblem,.hero-detail-cover>.rarity-emblem,.summon-result>.result-badge{top:0;right:0;left:auto;height:auto;aspect-ratio:var(--crest-aspect);margin:0;transform:translate(calc(var(--crest-x) - 4px),calc(4px - var(--crest-y)));z-index:9}
+.hero-card-top>.equipped-pill{left:9px;right:auto;top:10px}
+@media(max-width:670px){.hero-card-top>.equipped-pill{left:7px;right:auto;top:8px}}
