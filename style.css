@@ -145,3 +145,27 @@ main{max-width:1200px}
 .summon-result .result-badge{position:absolute;z-index:3;top:0;left:0;width:104px;height:77px;margin:0}.summon-result .portrait{border-radius:9px 9px 0 0}.summon-result b{display:block;margin-top:10px;font:600 19px 'Cormorant Garamond',Georgia,serif}.summon-result[data-rarity="SSR"]{box-shadow:0 0 20px #dfbd7033}
 .equipment-slot>small:has(.rarity-emblem),.item-rarity:has(.rarity-emblem){display:flex;align-items:center;justify-content:center;gap:4px}
 @media(max-width:670px){.hero-card{border-radius:12px}.hero-card-body{padding:11px 10px 14px}.hero-card-top>.rarity-emblem{width:95px;height:73px;top:-1px;left:-1px}.rank-star{width:23px;height:23px}.rank-stars{gap:1px}.hero-name-overlay h3{font-size:24px}.rarity-emblem.micro{width:58px;height:42px}.rarity-emblem.tiny{width:45px;height:32px}.item-meta>span:last-child{font-size:9px}.squad-meta{justify-content:center}.summon-result .result-badge{width:99px;height:73px}}
+/* Nine-slice the painted frame into the perimeter reserved outside the content. */
+.hero-card,.hero-card[data-rarity="SSR"],.summon-result{
+ border:20px solid transparent;
+ border-image-source:url(assets/card-frame.webp);
+ border-image-slice:210 160;
+ border-image-width:24px;
+ border-image-outset:4px;
+ border-image-repeat:stretch;
+ overflow:visible;
+ background-clip:padding-box;
+ border-radius:12px;
+ box-shadow:0 8px 24px #0005;
+}
+.hero-card-top{border-radius:6px 6px 0 0}
+.hero-card-body{padding:14px 12px 16px}
+.summon-result{border-width:14px;border-image-width:18px;padding-bottom:12px}
+.hero-grid{gap:24px}
+@media(max-width:670px){
+ .hero-grid{gap:15px}
+ .hero-card,.hero-card[data-rarity="SSR"]{border-width:11px;border-image-width:15px;border-image-outset:4px}
+ .hero-card-body{padding:10px 7px 13px}
+ .hero-card-top>.rarity-emblem{width:85px;height:66px;top:-5px;left:-6px}
+ .summon-result{border-width:10px;border-image-width:14px}
+}
