@@ -12,7 +12,7 @@ export const HEROES=[
 {id:'morgana',name:'Моргана',title:'Королева вороньей ночи',rarity:'SSR',element:'Тьма',base:25,portrait:4,sheet:'heroes2',color:'#c09bea',skill:'Раз в 10 секунд наносит удар на 500% своего DPS и даёт 15 энергии Разлома.'},
 {id:'azhar',name:'Азхар',title:'Наследник драконьей крови',rarity:'SSR',element:'Пламя',base:28,portrait:5,sheet:'heroes2',color:'#eea676',skill:'Каждый десятый ручной удар вызывает драконий огонь на 500% его DPS.'}
 ];
-export const ELEMENTS={Пламя:{color:'#efaa7e',symbol:'✧'},Лёд:{color:'#8fd4f2',symbol:'❄'},Природа:{color:'#80d1a0',symbol:'❧'},Тьма:{color:'#bc9de9',symbol:'☽'},Свет:{color:'#e9cf8e',symbol:'✦'}};
+export const ELEMENTS={Пламя:{color:'#efaa7e',icon:'fire'},Лёд:{color:'#8fd4f2',icon:'ice'},Вода:{color:'#6abcec',icon:'water'},Природа:{color:'#80d1a0',icon:'nature'},Тьма:{color:'#bc9de9',icon:'dark'},Свет:{color:'#e9cf8e',icon:'light'},Воздух:{color:'#a8e7df',icon:'air'},Земля:{color:'#c9a06d',icon:'earth'}};
 export const CONTRACTS=[{id:'taps',title:'Искры в ладонях',desc:'Нанеси 80 ручных ударов',goal:80,reward:{gold:1000}},{id:'kills',title:'Путь сквозь тени',desc:'Победи 25 противников',goal:25,reward:{gems:60}},{id:'summons',title:'Голоса созвездий',desc:'Сделай 3 призыва',goal:3,reward:{gems:40,dust:50}}];
 export const RARITIES={R:{name:'Редкий',color:'#8daeff'},SR:{name:'Эпический',color:'#b394ef'},SSR:{name:'Легендарный',color:'#e8c780'}};
 export const ENEMIES=[
