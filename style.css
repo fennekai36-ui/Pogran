@@ -222,6 +222,6 @@ main{max-width:1200px}
 .topbar-settings .nav-art{width:29px;height:29px}
 /* Navigation already names the active section; no repeated page titles. */
 .page-tools{display:flex;justify-content:flex-end;align-items:center;margin:0 0 8px;min-height:0}
-/* New hero portraits are individual complete alpha illustrations, never atlas slices. */
-.portrait.standalone-portrait{background:radial-gradient(ellipse at 50% 35%,color-mix(in srgb,var(--hero-color) 25%,#1b263b),#111a2b 75%)}
-.standalone-portrait>img{display:block;width:100%;height:100%;object-fit:contain;object-position:center;background:none;pointer-events:none}
+/* Individual hero illustrations use the same full-bleed composition as the original cards. */
+.portrait.standalone-portrait{background:#111a2b}
+.standalone-portrait>img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 35%;background:none;pointer-events:none}
