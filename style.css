@@ -220,3 +220,5 @@ main{max-width:1200px}
 #mobile-nav button .nav-art{width:36px;height:36px;opacity:1}
 .settings-button .nav-art{width:30px;height:30px;flex:0 0 30px}
 .topbar-settings .nav-art{width:29px;height:29px}
+/* Navigation already names the active section; no repeated page titles. */
+.page-tools{display:flex;justify-content:flex-end;align-items:center;margin:0 0 8px;min-height:0}
