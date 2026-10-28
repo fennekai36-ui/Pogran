@@ -211,3 +211,5 @@ main{max-width:1200px}
 .hero-card-top>.rarity-emblem,.hero-detail-cover>.rarity-emblem,.summon-result>.result-badge{top:0;right:0;left:auto;height:auto;aspect-ratio:var(--crest-aspect);margin:0;transform:translate(calc(var(--crest-x) - 4px),calc(4px - var(--crest-y)));z-index:9}
 .hero-card-top>.equipped-pill{left:9px;right:auto;top:10px}
 @media(max-width:670px){.hero-card-top>.equipped-pill{left:7px;right:auto;top:8px}}
+/* Detail portraits have their own proportional crest size. */
+.hero-detail-cover>.rarity-emblem{width:38%;max-width:72px;height:auto}
