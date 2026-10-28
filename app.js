@@ -1,5 +1,5 @@
 import {HEROES,RARITIES,ENEMIES,TRIALS,RELICS,EQUIP_SLOTS,EQUIP_NAMES,ELEMENTS,CONTRACTS,ABILITIES} from './data.js?v=6';
-import * as game from './engine.js?v=6';
+import * as game from './engine.js?v=7';
 const $=id=>document.getElementById(id);
 let storageOK=true,state;try{state=game.load(localStorage.getItem(game.SAVE_KEY));}catch{state=game.fresh();storageOK=false}
 let renderedDay=game.day();
