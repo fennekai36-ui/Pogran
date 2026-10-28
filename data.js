@@ -10,7 +10,13 @@ export const HEROES=[
 {id:'isolde',name:'Изольда',title:'Королева инея',rarity:'SR',element:'Лёд',base:8.2,portrait:2,sheet:'heroes2',color:'#9dd5f5',skill:'Замедляет отсчёт времени у боссов на 15%.'},
 {id:'cassian',name:'Кассиан',title:'Проводник солнца',rarity:'SR',element:'Свет',base:9,portrait:3,sheet:'heroes2',color:'#eac985',skill:'Даёт отряду +2,5% урона за каждый найденный артефакт.'},
 {id:'morgana',name:'Моргана',title:'Королева вороньей ночи',rarity:'SSR',element:'Тьма',base:25,portrait:4,sheet:'heroes2',color:'#c09bea',skill:'Раз в 10 секунд наносит удар на 500% своего DPS и даёт 15 энергии Разлома.'},
-{id:'azhar',name:'Азхар',title:'Наследник драконьей крови',rarity:'SSR',element:'Пламя',base:28,portrait:5,sheet:'heroes2',color:'#eea676',skill:'Каждый десятый ручной удар вызывает драконий огонь на 500% его DPS.'}
+{id:'azhar',name:'Азхар',title:'Наследник драконьей крови',rarity:'SSR',element:'Пламя',base:28,portrait:5,sheet:'heroes2',color:'#eea676',skill:'Каждый десятый ручной удар вызывает драконий огонь на 500% его DPS.'},
+{id:'neris',name:'Нерис',rarity:'R',element:'Вода',base:3,art:'neris',color:'#6abcec',passive:{energy:1},skill:'Каждый ручной удар даёт на 1 энергию Разлома больше.'},
+{id:'aera',name:'Эйра',rarity:'R',element:'Воздух',base:2.9,art:'aera',color:'#a8e7df',passive:{crit:.04},skill:'Повышает шанс критического удара на 4%.'},
+{id:'garon',name:'Гарон',rarity:'SR',element:'Земля',base:9.2,art:'garon',color:'#c9a06d',passive:{armorDamage:.2},skill:'Весь урон по врагам с бронёй выше на 20%.'},
+{id:'sylph',name:'Сильф',rarity:'SR',element:'Воздух',base:8.8,art:'sylph',color:'#a8e7df',passive:{ignoreEvasion:1},skill:'Уклонение врагов больше не снижает автоурон отряда.'},
+{id:'thalass',name:'Таласс',rarity:'SSR',element:'Вода',base:26,art:'thalass',color:'#6abcec',ability:{interval:9,multiplier:5.5,stagger:1,name:'Царский прилив'},skill:'Раз в 9 секунд наносит удар на 550% своего DPS и останавливает таймер босса на 1 секунду.'},
+{id:'geon',name:'Геон',rarity:'SSR',element:'Земля',base:29,art:'geon',color:'#c9a06d',ability:{interval:12,multiplier:5,breakShield:true,name:'Сердце горы'},skill:'Каждые 12 секунд разрушает барьер и наносит удар на 500% своего DPS.'}
 ];
 export const ELEMENTS={Пламя:{color:'#efaa7e',icon:'fire'},Лёд:{color:'#8fd4f2',icon:'ice'},Вода:{color:'#6abcec',icon:'water'},Природа:{color:'#80d1a0',icon:'nature'},Тьма:{color:'#bc9de9',icon:'dark'},Свет:{color:'#e9cf8e',icon:'light'},Воздух:{color:'#a8e7df',icon:'air'},Земля:{color:'#c9a06d',icon:'earth'}};
 export const CONTRACTS=[{id:'taps',title:'Искры в ладонях',desc:'Нанеси 80 ручных ударов',goal:80,reward:{gold:1000}},{id:'kills',title:'Путь сквозь тени',desc:'Победи 25 противников',goal:25,reward:{gems:60}},{id:'summons',title:'Голоса созвездий',desc:'Сделай 3 призыва',goal:3,reward:{gems:40,dust:50}}];
